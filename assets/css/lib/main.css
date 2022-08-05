@@ -1,0 +1,73 @@
+.background{
+    background-image: url(../../img/8.jpg);
+}
+#TextCorreo{
+    padding-bottom:8px ;
+}
+#Resumen{
+    height: 120px;
+}
+#text-empleos{
+margin-top: -70px;
+}
+#text-educacion{
+    margin-left: 1px;
+    margin-top: 20px;
+}
+#text-habilidades{
+    margin-left: 50%;
+    margin-top: -8%
+}
+#botones{
+    padding-top: 25px;
+
+}
+#div-limpiar, #div-generar{
+    padding-top: 25px;
+}
+
+#btn-limpiar{
+    
+    margin-left: 625px;
+}
+#btn-generar{
+    
+    margin-left: 0%;
+}
+#text-centificaciones{
+    padding-top: 15px;
+}
+#Azulito{
+    background-color: #366092;
+    height: 50px;
+    width: 300px;
+    padding-left: 0;
+}
+h2{
+    color: #264061;
+}
+h4{
+    font-size: 0.5cm;
+}
+#Azulito-final{
+    background-color:#264061;
+    height: 50px;
+    width: 400px;
+    margin-left: auto;
+    margin-top: 100px;
+}
+.input-error{
+    border-color: red;
+    border-width: medium;
+}
+.input-sucess{
+    border-color: rgb(159, 236, 43);
+    border-width: medium;
+}
+#h2Nombre{
+    padding-bottom: 200px;
+}
+hr{
+    border: 1px solid #264061
+    
+}

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/lib/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/lib/main.css" />
+    <title>CV</title>
+  </head>
+  <body>
+    <div>
+      <div
+        id="div-card"
+        class="card col-md-8 offset-2"
+      >
+        <div class="card-header bg-dark">
+          <h4 class="text-center text-white">Generador de CV</h4>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title text-center h4">
+            Por favor llenar todos los campos
+          </h5>
+          <div class="row">
+            <div class="col-md-4">
+              <label class="form-label" for=""><b>Nombre</b></label>
+              <input id="Nombre" class="form-control" type="text" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label" for=""><b>Apellido</b></label>
+              <input id="Apellido" class="form-control" type="text" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label" for=""><b>Telefono</b></label>
+              <input id="Telefono" class="form-control" type="text" />
+            </div>
+            <div class="col-md-12">
+              <label class="form-label" for=""><b>Direccion</b></label>
+              <input id="Direccion" class="form-control" type="text" />
+            </div>
+            <div class="col-md-6" id="Correodiv">
+              <label id="TextCorreo" for=""><b>Correo</b></label>
+              <div class="input-group has-validation">
+                <span class="input-group-text has-validation">@</span>
+                <input id="Correo" class="form-control" type="text" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for=""><b>Pagina Web</b></label>
+              <input id="PaginaWeb" class="form-control" type="text" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for=""><b>Idiomas</b></label>
+              <input
+                id="Idiomas"
+                class="form-control"
+                placeholder="Favor separar los idiomas con COMA(,)"
+                type="text"
+              />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for=""><b>Resumen</b></label>
+              <textarea id="Resumen" class="form-control"></textarea>
+            </div>
+
+            <div id="text-empleos" class="col-md-6">
+              <label class="form-label" for=""><b>Empleos</b></label>
+              <input
+                id="Empleos"
+                class="form-control"
+                placeholder="Favor separar los empleos con COMA(,)"
+                type="text"
+              />
+            </div>
+            <div id="text-educacion" class="col-md-6">
+              <label class="form-label" for=""><b>Educacion</b></label>
+              <input
+                id="Educacion"
+                class="form-control"
+                placeholder="Favor separar su Educacion con COMA(,)"
+                type="text"
+              />
+            </div>
+            <div id="text-habilidades" class="col-md-6">
+              <label class="form-label" for=""><b>Habilidades</b></label>
+              <input
+                id="Habilidades"
+                class="form-control"
+                placeholder="Favor separar sus Habilidades con COMA(,)"
+                type="text"
+              />
+            </div>
+            <div id="text-centificaciones" class="col-md-12">
+              <label class="form-label" for=""><b>Certificaciones</b></label>
+              <input
+                id="Certificaciones"
+                class="form-control"
+                placeholder="Favor separar sus CERTIFICACIONES con COMA(,)"
+                type="text"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div onclick="Clear()" id="div-limpiar" class="col-md-10">
+              <button
+                id="btn-limpiar"
+                type="button"
+                class="btn btn-outline-danger btn-lg"
+              >
+                Limpiar
+              </button>
+            </div>
+            <div id="div-generar" class="col-md-2">
+              <button
+                onclick="Validate()"
+                id="btn-generar"
+                class="btn btn-outline-primary btn-lg"
+              >
+                Generar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <div id="MainContainer" class="container bg-white col-md-8 offset-2 card">      
+     <!--<div id="Azulito"></div>
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Miguel Santos</h2>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <h2>Contacto</h2>
+          <hr />
+          <div>
+            <h4><b>Direccion</b></h4>
+            <p>117 Great Portland Street, London WSW 6PQ</p>
+          </div>
+          <div>
+            <h4><b>Phone</b></h4>
+            <p>+44 (0)20 7666 8555</p>
+          </div>
+          <div>
+            <h4><b>Correo</b></h4>
+            <p>Miguel@gmail.com</p>
+          </div>
+          <h2>Idiomas</h2>
+          <hr />
+          <div>
+            <p>
+              Spanish-C2 <br />
+              Chinese-A1 <br />
+              German-A2 <br />
+            </p>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <h2>Resumen</h2>
+          <hr />
+          <div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              tempora temporibus dolor aliquam dolorem esse ab similique alias
+              culpa, officiis mollitia aspernatur enim modi fugiat adipisci
+              facilis. Nesciunt, dignissimos corrupti.
+            </p>
+          </div>
+          <h2>Habilidades</h2>
+          <hr />
+          <div class="row">
+            <div class="col-md-6">
+              <ul>
+                <li>Project management</li>
+                <li>Strong decision maker</li>
+                <li>Complex problem solver</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul>
+                <li>Creative design</li>
+                <li>Innovative</li>
+                <li>Service-docused</li>
+              </ul>
+            </div>
+          </div>
+          <h2>Educacion</h2>
+          <hr />
+          <div>
+            <p>
+              <b>Web Developer-09/2045 to 05/2019</b><br />
+              <b>Luna Web Design,</b> New York
+            </p>
+            <ul>
+              <li>
+                Cooperate with designers to create clean interfaces and simple,
+                intuitive interactions and experiences.
+              </li>
+              <li>Develop project concepts and maintain optimal workflow.</li>
+              <li>
+                Work with senior developer to manage large, complex design
+                projects for corporate clients.
+              </li>
+              <li>
+                Complete detailed programming and development tasks for front
+                end public and internal websites as well as challenging back-end
+                server code.
+              </li>
+              <li>
+                Cary out quality assurance tests to descover errors and optimize
+                usability
+              </li>
+            </ul>
+          </div>
+          <h2>Empleos</h2>
+          <hr />
+          <div>
+            <p>
+              Bachelor of Science:<b>Computer Information Systems</b>-2014
+              <b>Columbia University,</b> NY.
+            </p>
+          </div>
+          <h2>Certificacion</h2>
+          <hr />
+          <div>
+            <p>
+              PHP Framework(certificated)<b>Zend, Codeigniter,Symfony.</b>
+              Programming Lenguages:
+              <b>Java Script,HTML5,PHP OOP,CSS,SQL,MYSQL</b>
+            </p>
+          </div>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <div id="Azulito-final"></div>
+        </div>
+      </div>-->
+    </div>
+    <script src="./assets/js/site/index/index.js"></script>
+  </body>
+</html>
